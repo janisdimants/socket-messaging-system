@@ -1,0 +1,36 @@
+{
+  "name": "node-ts-starter",
+  "version": "1.0.0",
+  "description": "Beetroot Labs Test Task.",
+  "main": "src/index.ts",
+  "private": true,
+  "scripts": {
+    "test": "ts-mocha tests/**/*.spec.ts",
+    "build": "tsc",
+    "watch-src": "tsc -w",
+    "watch-node": "nodemon --watch dist dist/index.js",
+    "watch": "concurrently -p \"[{name}]\" -n \"TSC,Node\" \"npm run watch-src\" \"npm run watch-node\"",
+    "start": "node dist/index.js"
+  },
+  "author": "Janis Dimants",
+  "devDependencies": {
+    "@types/chai": "^4.1.7",
+    "@types/mocha": "^5.2.5",
+    "@types/node": "^10.12.18",
+    "chai": "^4.2.0",
+    "concurrently": "^4.1.0",
+    "mocha": "^5.2.0",
+    "nodemon": "^1.18.9",
+    "ts-mocha": "^2.0.0",
+    "typescript": "^3.2.4"
+  },
+  "dependencies": {
+    "@types/express": "^4.16.1",
+    "@types/redis": "^2.8.10",
+    "@types/socket.io": "^2.1.2",
+    "dotenv": "^6.2.0",
+    "express": "^4.16.4",
+    "redis": "^2.8.0",
+    "socket.io": "^2.2.0"
+  }
+}
